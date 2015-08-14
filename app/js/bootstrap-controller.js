@@ -13,6 +13,32 @@ function BootstrapController($scope, growl) {
     $scope.pessoa = {
         nome: "Otávio"
     }
+
+    $scope.gridOptions = {
+        data: 'pessoas',
+        columnDefs: [
+            {name: 'Nome', field:'nome', cellTemplate: 'app/templates/cell-template.html'},
+            {name: 'Sobrenome', field:'sobrenome', cellTemplate: 'app/templates/cell-template.html'},
+            {name: 'E-mail', field:'email', cellTemplate: 'app/templates/cell-template.html'},
+            {name: 'Data de Nascimento', field:'nascimento', cellTemplate: 'app/templates/cell-template.html'},
+            {name: 'Ações', field:'acoes', cellTemplate: 'app/templates/cell-buttons-template.html'}
+        ],
+        enableColumnMenus:false,
+        rowTemplate: 'app/templates/row-template.html'
+    };
+
+    $scope.gridItemClick = function(row, col, colIndex) {
+        console.log(row);
+    };
+
+    $scope.getRowStyle = function(row) {
+        var rowStyle = {};
+        if(angular.isDefined(row.entity.cor)) {
+            rowStyle.backgroundColor = row.entity.cor;
+        }
+        return rowStyle;
+    };
+
     $scope.salvar = function() {
         if($scope.formPessoa.$invalid) {
             growl.warning("Existem erros no formulário", {title: 'Erro!'});

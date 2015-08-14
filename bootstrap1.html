@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
         <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="bower_components/angular-growl-v2/build/angular-growl.min.css"/>
+        <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css"/>
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -18,6 +19,7 @@
         <script src="bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
         <script src="app/js/app-config-bootstrap.js"></script>
         <script src="app/js/bootstrap-controller.js"></script>
+        <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
 
         <script type="text/ng-template" id="error-messages">
             <p ng-message="minlength">Campo muito curto</p>
@@ -29,7 +31,11 @@
         <div ng-controller="BootstrapController" class="container">
             <div growl></div>
             <form action="" novalidate class="row" name="formPessoa">
-                <div class="form-group col-sm-3" ng-class="{'has-error': (formPessoa.nome.$invalid && !formPessoa.nome.$pristine)}">
+                <div class="form-group col-sm-2">
+                    <label for="cor">Cor:</label>
+                    <input type="text" name="cor" id="cor" class="form-control" ng-model="pessoa.cor" />
+                </div>
+                <div class="form-group col-sm-2" ng-class="{'has-error': (formPessoa.nome.$invalid && !formPessoa.nome.$pristine)}">
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" class="form-control" ng-model="pessoa.nome"
                             minlength="5" maxlength="50" required />
@@ -38,11 +44,11 @@
                         <div ng-messages-include="app/msgs/mensagens.html"></div>
                     </div>
                 </div>
-                <div class="form-group col-sm-3">
+                <div class="form-group col-sm-2">
                     <label for="sobrenome">Sobrenome:</label>
                     <input type="text" name="sobrenome" id="sobrenome" class="form-control" ng-model="pessoa.sobrenome" />
                 </div>
-                <div class="form-group col-sm-3" ng-class="{'has-error': (formPessoa.email.$invalid && !formPessoa.email.$pristine)}">
+                <div class="form-group col-sm-2" ng-class="{'has-error': (formPessoa.email.$invalid && !formPessoa.email.$pristine)}">
                     <label for="sobrenome">E-mail:</label>
                     <input type="email" name="email" id="email" class="form-control" ng-model="pessoa.email"
                             minlength="5" maxlength="50" required />
@@ -51,11 +57,11 @@
                         <p ng-message="email">Informe um e-mail válido</p>
                     </div>
                 </div>
-                <div class="form-group col-sm-3">
+                <div class="form-group col-sm-2">
                     <label for="nascimento">Nascimento:</label>
                     <input type="date" name="nascimento" id="nascimento" class="form-control" ng-model="pessoa.nascimento" />
                 </div>
-                <div class="form-group col-sm-3">
+                <div class="form-group col-sm-2">
                     <label for="sexo">Sexo:</label>
                     <select name="sexo" id="sexo" class="form-control" ng-model="pessoa.sexo">
                         <option value="F">Feminino</option>
@@ -81,6 +87,8 @@
                     Excluir
                 </button>
             </nav>
+
+            <div ui-grid="gridOptions" ui-grid-resize-columns ui-grid-selection></div>
 
             <table class="table table-responsive table-hover">
                 <tr>
