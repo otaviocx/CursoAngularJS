@@ -1,7 +1,7 @@
 /**
  * Created by Otávio on 10/08/2015.
  */
-angular.module('helloWorldApp', ['ngMessages', 'ui.growl']).controller('HelloWorldController', HelloWorldController);
+angular.module('helloWorldApp', ['ngMessages', 'ui.growl', 'ngMaterial']).controller('HelloWorldController', HelloWorldController);
 
 HelloWorldController.$inject = ['$scope'];
 function HelloWorldController($scope) {

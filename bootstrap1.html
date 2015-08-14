@@ -11,15 +11,20 @@
         <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="bower_components/angular-growl-v2/build/angular-growl.min.css"/>
         <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css"/>
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/angularjs/angular.min.js"></script>
         <script src="bower_components/angular-messages/angular-messages.min.js"></script>
         <script src="bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
+        <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="bower_components/angular-material/angular-material.min.js"></script>
+
         <script src="app/js/app-config-bootstrap.js"></script>
         <script src="app/js/bootstrap-controller.js"></script>
-        <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
 
         <script type="text/ng-template" id="error-messages">
             <p ng-message="minlength">Campo muito curto</p>
@@ -67,6 +72,41 @@
                         <option value="F">Feminino</option>
                         <option value="M">Masculino</option>
                     </select>
+                </div>
+            </form>
+            <form name="materialForm">
+                <div layout layout-sm="column">
+                    <md-input-container flex>
+                        <label>Cor</label>
+                        <input type="text" ng-model="pessoa.cor">
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Nome</label>
+                        <input type="text" ng-model="pessoa.nome">
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Sobrenome</label>
+                        <input type="text" ng-model="pessoa.sobrenome">
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>E-mail</label>
+                        <input type="email" ng-model="pessoa.email" required minlength="5" maxlength="50">
+                        <div class="help-block" ng-messages="formPessoa.email.$error" ng-if="!formPessoa.email.$pristine">
+                            <div ng-messages-include="app/msgs/mensagens.html"></div>
+                            <p ng-message="email">Informe um e-mail válido</p>
+                        </div>
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Nascimento</label>
+                        <input type="date" ng-model="pessoa.nascimento">
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Sexo</label>
+                        <md-select name="sexo" id="sexo" ng-model="pessoa.sexo">
+                            <md-option value="F">Feminino</md-option>
+                            <md-option value="M">Masculino</md-option>
+                        </md-select>
+                    </md-input-container>
                 </div>
             </form>
             <nav class="navbar navbar-default">

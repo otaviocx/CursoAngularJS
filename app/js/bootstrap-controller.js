@@ -20,7 +20,7 @@ function BootstrapController($scope, growl) {
             {name: 'Nome', field:'nome', cellTemplate: 'app/templates/cell-template.html'},
             {name: 'Sobrenome', field:'sobrenome', cellTemplate: 'app/templates/cell-template.html'},
             {name: 'E-mail', field:'email', cellTemplate: 'app/templates/cell-template.html'},
-            {name: 'Data de Nascimento', field:'nascimento', cellTemplate: 'app/templates/cell-template.html'},
+            {name: 'Data de Nascimento', field:'nascimento', cellTemplate: 'app/templates/cell-date-template.html'},
             {name: 'Ações', field:'acoes', cellTemplate: 'app/templates/cell-buttons-template.html'}
         ],
         enableColumnMenus:false,
