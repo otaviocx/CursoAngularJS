@@ -17,6 +17,8 @@
     "angular-ui-growl": "~0.0.1",
     "angular-growl-v2": "~0.7.5",
     "angular-ui-grid": "~3.0.4",
-    "angular-material": "~0.10.1"
+    "angular-material": "~0.10.1",
+    "ui-router": "~0.2.15",
+    "oclazyload": "~1.0.4"
   }
 }

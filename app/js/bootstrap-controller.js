@@ -6,8 +6,20 @@ angular.module('helloWorldApp').controller('BootstrapController', BootstrapContr
     growlProvider.onlyUniqueMessages(false);
 }]);
 
-BootstrapController.$inject = ['$scope', 'growl'];
-function BootstrapController($scope, growl) {
+BootstrapController.$inject = ['$scope', 'growl', '$rootScope'];
+function BootstrapController($scope, growl, $rootScope) {
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+        //alert(toState.name+"/"+fromState.name);
+    });
+
+    $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+        //alert("Bla:"+toState.name+"/"+fromState.name);
+    });
+
+    $rootScope.$on('$stateNotFound', function(event, notfoundstate, fromState, fromParams) {
+       // alert("Blabel:"+notfoundstate+"/"+fromState.name);
+    });
+
     $scope.novo = true;
     $scope.pessoas = [];
     $scope.pessoa = {
