@@ -21,8 +21,12 @@
             'ui.router', 'oc.lazyLoad'])
         .config(config);
 
-    config.$inject = ['$urlRouterProvider', '$stateProvider'];
-    function config($urlRouterProvider, $stateProvider, $rootScope) {
+    config.$inject = ['$urlRouterProvider', '$stateProvider', '$mdThemingProvider'];
+    function config($urlRouterProvider, $stateProvider, $mdThemingProvider) {
+        $mdThemingProvider
+            .theme("green")
+            .primaryPalette("green");
+
         var home = {
             url: '/',
             templateUrl: 'app/views/home.html'

@@ -19,6 +19,10 @@ module.exports = function(grunt) {
             fazer_wiredep: {
                 files: ['bower.json'],
                 tasks: ['wiredep']
+            },
+            less: {
+                files: ['app/**/*.less'],
+                tasks: ['less']
             }
         },
         copy: {
@@ -89,8 +93,16 @@ module.exports = function(grunt) {
                     }
                 ]
             }
+        },
+        less: {
+            build: {
+                files: {
+                    "app/css/app.css": "app/less/app.less"
+                }
+            }
         }
     });
 
     grunt.registerTask('build', ['clean', 'copy', 'concat', 'ngAnnotate', 'uglify', 'cssmin', 'htmlmin']);
+    grunt.registerTask('desenvolvimento', ['watch']);
 };
