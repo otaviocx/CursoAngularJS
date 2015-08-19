@@ -1,0 +1,1 @@
+function CadastroProdutoController(a,b,c){a.produtoId=b.id,c.go("pessoa.cadastro",{bla:a.produtoId})}angular.module("helloWorldApp").controller("CadastroProdutoController",CadastroProdutoController),CadastroProdutoController.$inject=["$scope","$stateParams","$state"];

@@ -27,6 +27,9 @@
 
         <script src="app/js/app-config-bootstrap.js"></script>
         <script src="app/js/bootstrap-controller.js"></script>
+        <script src="app/directives/hello/hello-directive.js"></script>
+
+        <script src="//localhost:35729/livereload.js"></script>
 
         <script type="text/ng-template" id="error-messages">
             <p ng-message="minlength">Campo muito curto</p>
@@ -51,7 +54,7 @@
                 </md-toolbar>
             </div>
             <div>
-
+                <hello></hello>
             </div>
             <div>
                 <div ui-view></div>

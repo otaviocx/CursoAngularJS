@@ -1,0 +1,1 @@
+function CadastroPessoaController(a){}angular.module("helloWorldApp").controller("CadastroPessoaController",CadastroPessoaController),CadastroPessoaController.$inject=["$scope"];

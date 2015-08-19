@@ -1,0 +1,1 @@
+function PesquisaPessoaController(a){}angular.module("helloWorldApp").controller("PesquisaPessoaController",PesquisaPessoaController),PesquisaPessoaController.$inject=["$scope"];

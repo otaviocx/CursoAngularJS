@@ -15,9 +15,9 @@
         };
     }
 
-    angular.module('helloWorldApp', ['ngMessages', 'angular-growl',
+    angular.module('helloWorldApp', ['oobjDirectives', 'ngMessages', 'angular-growl',
             'ui.grid', 'ui.grid.resizeColumns',
-            'ui.grid.selection', 'ngMaterial',
+            'ui.grid.selection',
             'ui.router', 'oc.lazyLoad'])
         .config(config);
 

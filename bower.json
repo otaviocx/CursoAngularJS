@@ -19,6 +19,14 @@
     "angular-ui-grid": "~3.0.4",
     "angular-material": "~0.10.1",
     "ui-router": "~0.2.15",
-    "oclazyload": "~1.0.4"
+    "oclazyload": "~1.0.4",
+    "angular-bootstrap": "~0.13.3"
+  },
+  "overrides": {
+    "bootstrap" : {
+      "main" : [
+        "dist/css/bootstrap.css"
+      ]
+    }
   }
 }
