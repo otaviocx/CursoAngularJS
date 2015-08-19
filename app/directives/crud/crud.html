@@ -1,0 +1,29 @@
+<div>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>
+                <span ng-bind="::titulo"></span>
+            </h2>
+        </div>
+    </md-toolbar>
+
+    <md-card>
+        <div ng-transclude></div>
+    </md-card>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <md-button class="md-raised md-primary" ng-click="salvar();">
+                    Salvar
+                </md-button>
+                <md-button class="md-raised" ng-click="limpar();">
+                    Limpar
+                </md-button>
+                <md-button class="md-raised md-warn" ng-click="excluir();">
+                    Excluir
+                </md-button>
+            </div>
+        </div>
+    </nav>
+</div>

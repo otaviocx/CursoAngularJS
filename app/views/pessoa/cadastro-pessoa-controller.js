@@ -5,4 +5,13 @@ angular.module('helloWorldApp').controller('CadastroPessoaController', CadastroP
 
 CadastroPessoaController.$inject = ['$scope'];
 function CadastroPessoaController($scope) {
+    $scope.salvar = function() {
+        alert("salvar");
+    };
+    $scope.limpar = function() {
+
+    };
+    $scope.excluir = function() {
+
+    };
 }

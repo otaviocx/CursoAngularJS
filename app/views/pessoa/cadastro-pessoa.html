@@ -1,5 +1,11 @@
-<div>
-    <div ng-controller="CadastroPessoaController" style="width: 100%; height: 150px; background-color: green">
-
-    </div>
+<div ng-controller="CadastroPessoaController">
+    <crud titulo="Cadastro de Pessoa"
+          acao-salvar="salvar()"
+          acao-limpar="limpar()"
+          acao-excluir="excluir()">
+        <div class="row">
+            <text-input label="Nome" colspan="3"></text-input>
+            <text-input label="Sobrenome" colspan="3"></text-input>
+        </div>
+    </crud>
 </div>
