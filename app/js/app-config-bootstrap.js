@@ -3,6 +3,8 @@
  */
 
 (function() {
+    'use strict';
+
     function resolver(path) {
         return {
             deps: function($ocLazyLoad) {
