@@ -1,0 +1,8 @@
+<div ng-class="classInputText">
+    <md-input-container flex>
+        <label ng-bind="::label"></label>
+        <md-select ng-required="ngRequired" ng-disabled="ngDisabled" ng-model="ngModel">
+            <md-option ng-repeat="m in values" value="{{m.value}}" ng-bind="m.label"></md-option>
+        </md-select>
+    </md-input-container>
+</div>

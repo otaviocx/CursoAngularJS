@@ -20,11 +20,12 @@
     "angular-material": "~0.10.1",
     "ui-router": "~0.2.15",
     "oclazyload": "~1.0.4",
-    "angular-bootstrap": "~0.13.3"
+    "angular-bootstrap": "~0.13.3",
+    "pickadate": "~3.5.6"
   },
   "overrides": {
-    "bootstrap" : {
-      "main" : [
+    "bootstrap": {
+      "main": [
         "dist/css/bootstrap.css"
       ]
     }

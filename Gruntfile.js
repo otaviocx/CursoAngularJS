@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         wiredep: {
             target: {
-                src: 'index.html'
+                src: '*.html'
             }
         },
         watch: {
